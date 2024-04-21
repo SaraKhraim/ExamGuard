@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Menu } from 'antd';
 import { ReadOutlined } from '@ant-design/icons';
+import { Link } from 'react-router-dom';
 
 const { SubMenu } = Menu;
 
@@ -29,8 +30,11 @@ const MenuList = () => {
     setOpenKeys(keys);
   };
 
+  
+
   return (
-    <Menu
+    <div style={{ position: 'fixed', top: '200', left: '0', width: '200px' }}>
+      <Menu
       mode="inline"
       defaultOpenKeys={openKeys}
       onOpenChange={handleOpenChange}
@@ -39,12 +43,15 @@ const MenuList = () => {
         <SubMenu key={`faculty-${index}`} title={faculty.name} icon={<ReadOutlined />}>
           {faculty.classrooms.map((classroom, idx) => (
             <Menu.Item key={`classroom-${index}-${idx}`}>
-              {classroom}
+              <Link to={`/classroom/${classroom}`}>{classroom}</Link>
             </Menu.Item>
           ))}
         </SubMenu>
       ))}
     </Menu>
+
+    </div>
+    
   );
 };
 

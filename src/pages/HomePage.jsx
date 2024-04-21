@@ -4,13 +4,14 @@ import SideBar from "../components/SideBar";
 
 
 
-const HomePage = ({title}) => {
-    
 
+const HomePage = ({title}) => {
+  
     return (
       <React.Fragment>
         <NavBar/>
         <SideBar/>
+        
       </React.Fragment>
     );
 };

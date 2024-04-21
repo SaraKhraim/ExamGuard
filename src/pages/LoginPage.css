@@ -1,0 +1,18 @@
+.background-container  {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+
+.background-image {
+    /* Set the background image */
+    background-image: url('C:\Users\sarak\OneDrive\Desktop\ExamGuard\React\examguard-app\public\Pictures\ExamGuardLogo.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    filter: blur(5px); 
+    z-index: -1; 
+  }
